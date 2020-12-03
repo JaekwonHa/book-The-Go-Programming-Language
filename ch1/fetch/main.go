@@ -20,6 +20,8 @@ func main() {
 			os.Exit(1)
 		}
 
+		fmt.Printf("http status code: %d\n", resp.StatusCode)
+
 		_, err = io.Copy(os.Stdout, resp.Body)
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
