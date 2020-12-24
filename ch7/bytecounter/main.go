@@ -87,4 +87,9 @@ func main() {
 	c4, n := CountingWriter(&c)
 	c4.Write([]byte("hello"))
 	fmt.Printf("%d\n", *n)
+
+	root := &tree{value: 3}
+	root = add(root, 4)
+	root = add(root, 1)
+	fmt.Println(root)
 }
